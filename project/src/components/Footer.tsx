@@ -47,7 +47,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock size={16} className="shrink-0 text-brass-400" />
-                <span>{hours[todayIndex].time}</span>
+                <span>2:00 PM – 1:30 AM</span>
               </li>
             </ul>
           </div>
