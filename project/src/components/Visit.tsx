@@ -75,10 +75,6 @@ export default function Visit() {
                     <a href="tel:+15736422927" className="transition-colors hover:text-brass-300">
                       (573) 642-2927
                     </a>
-                    <span className="mx-2 text-cream/30">·</span>
-                    <a href="tel:+15735928465" className="transition-colors hover:text-brass-300">
-                      (573) 592-8465
-                    </a>
                   </p>
                 </div>
               </div>
