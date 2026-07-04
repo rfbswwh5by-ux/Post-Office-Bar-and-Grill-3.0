@@ -2,13 +2,13 @@ import { useReveal } from '../hooks/useReveal';
 import { MapPin, Phone, Clock, ExternalLink, Car } from 'lucide-react';
 
 const hours = [
-  { day: 'Monday', time: 'Closed' },
+  { day: 'Monday', time: '2:00 PM - 1:00 AM' },
   { day: 'Tuesday', time: '2:00 PM – 1:30 AM' },
   { day: 'Wednesday', time: '2:00 PM – 1:30 AM' },
   { day: 'Thursday', time: '2:00 PM – 1:30 AM' },
-  { day: 'Friday', time: '2:00 PM – 1:30 AM' },
-  { day: 'Saturday', time: '2:00 PM – 1:30 AM' },
-  { day: 'Sunday', time: '2:00 PM – 1:30 AM' },
+  { day: 'Friday', time: '11:00 PM – 1:30 AM' },
+  { day: 'Saturday', time: '11:00 PM – 1:30 AM' },
+  { day: 'Sunday', time: '11:00 PM – 12:00 AM' },
 ];
 
 const today = new Date().getDay(); // 0 = Sunday
