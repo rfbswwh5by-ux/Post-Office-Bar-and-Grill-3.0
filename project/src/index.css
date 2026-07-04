@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink-900 text-cream font-body antialiased;
+  }
+  ::selection {
+    @apply bg-brass-400 text-ink-900;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+  .section-eyebrow {
+    @apply font-heading text-xs uppercase tracking-widest2 text-brass-400;
+  }
+  .section-title {
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl uppercase leading-none text-cream;
+  }
+  .btn-brass {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brass-400 px-7 py-3 font-heading text-sm uppercase tracking-widest text-ink-900 transition-all duration-300 hover:bg-brass-300 hover:shadow-[0_0_30px_-5px_rgba(212,162,76,0.6)] active:scale-95;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-cream/30 px-7 py-3 font-heading text-sm uppercase tracking-widest text-cream transition-all duration-300 hover:border-brass-400 hover:text-brass-300 active:scale-95;
+  }
+  .card-surface {
+    @apply rounded-2xl border border-ink-600/60 bg-ink-800/60 backdrop-blur-sm;
+  }
+}
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Texture overlay */
+.paper-texture {
+  background-image: radial-gradient(rgba(212, 162, 76, 0.04) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0b08;
+}
+::-webkit-scrollbar-thumb {
+  background: #5a4a32;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c6a4a;
+}
