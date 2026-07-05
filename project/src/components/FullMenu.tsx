@@ -109,9 +109,6 @@ useEffect(() => {
               {menu.map((cat) => (
                 <button
                   key={cat.id}
-                  ref={(el) => {
-  buttonRefs.current[cat.id] = el;
-}}
                   onClick={() => scrollTo(cat.id)}
                   className={`block w-full rounded-lg px-4 py-2.5 text-left font-heading text-sm uppercase tracking-wider transition-all duration-200 ${
                     activeSection === cat.id
