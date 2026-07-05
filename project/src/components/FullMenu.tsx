@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { menu } from '../data/content';
 import { ArrowLeft, Flame } from 'lucide-react';
 
@@ -10,7 +10,8 @@ const tagStyles: Record<string, string> = {
 
 export default function FullMenu({ onBack }: { onBack: () => void }) {
   const [activeSection, setActiveSection] = useState(menu[0].id);
-
+const buttonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -32,7 +33,15 @@ export default function FullMenu({ onBack }: { onBack: () => void }) {
     });
     return () => observer.disconnect();
   }, []);
-
+  
+useEffect(() => {
+  buttonRefs.current[activeSection]?.scrollIntoView({
+    behavior: 'smooth',
+    inline: 'center',
+    block: 'nearest',
+  });
+}, [activeSection]);
+  
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -66,6 +75,9 @@ export default function FullMenu({ onBack }: { onBack: () => void }) {
           {menu.map((cat) => (
             <button
               key={cat.id}
+              ref={(el) => {
+  buttonRefs.current[cat.id] = el;
+}}
               onClick={() => scrollTo(cat.id)}
               className={`shrink-0 whitespace-nowrap rounded-full px-4 py-1.5 font-heading text-xs uppercase tracking-wider transition-all ${
                 activeSection === cat.id
@@ -90,6 +102,9 @@ export default function FullMenu({ onBack }: { onBack: () => void }) {
               {menu.map((cat) => (
                 <button
                   key={cat.id}
+                  ref={(el) => {
+  buttonRefs.current[cat.id] = el;
+}}
                   onClick={() => scrollTo(cat.id)}
                   className={`block w-full rounded-lg px-4 py-2.5 text-left font-heading text-sm uppercase tracking-wider transition-all duration-200 ${
                     activeSection === cat.id
