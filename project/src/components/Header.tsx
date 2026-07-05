@@ -69,27 +69,30 @@ export default function Header() {
       </div>
 
       {/* Mobile drawer */}
-      <div
-        className={`overflow-hidden transition-all duration-500 md:hidden ${
-          open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <nav className="container-wide flex flex-col gap-1 pt-4">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-4 py-3 font-heading text-sm uppercase tracking-wider text-cream/80 transition-colors hover:bg-ink-800 hover:text-brass-400"
-            >
-              {l.label}
-            </a>
-          ))}
-          <a href="tel:+15736422927" className="btn-brass mt-2 w-full">
-            <Phone size={15} /> (573) 642-2927
-          </a>
-        </nav>
-      </div>
+<div
+  className={`fixed inset-0 z-[999] bg-ink-950/95 backdrop-blur-md transition-all duration-300 md:hidden ${
+    open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+  }`}
+>
+  <nav className="container-wide flex min-h-screen flex-col pt-28">
+    <div className="flex flex-col gap-6">
+      {links.map((l) => (
+        <a
+          key={l.href}
+          href={l.href}
+          onClick={() => setOpen(false)}
+          className="font-heading text-3xl uppercase tracking-wider text-cream transition-colors hover:text-brass-400"
+        >
+          {l.label}
+        </a>
+      ))}
+    </div>
+
+    <a href="tel:+15736422927" className="btn-brass mt-10 w-full justify-center">
+      <Phone size={15} /> (573) 642-2927
+    </a>
+  </nav>
+</div>
     </header>
   );
 }
