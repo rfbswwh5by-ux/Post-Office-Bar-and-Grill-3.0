@@ -36,7 +36,7 @@ export default function FullMenu({ onBack }: { onBack: () => void }) {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      const offset = 90;
+      const offset = window.innerWidth >= 1024 ? 90 : 120;
       const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -60,9 +60,28 @@ export default function FullMenu({ onBack }: { onBack: () => void }) {
         </div>
       </div>
 
-      <div className="container-wide py-12">
-        <div className="flex gap-10">
-          {/* Section shortcuts sidebar */}
+      {/* Mobile sticky category nav — sits directly below the header */}
+      <div className="sticky top-[57px] z-30 border-b border-ink-600/60 bg-ink-900/95 backdrop-blur-md lg:hidden">
+        <div className="flex gap-2 overflow-x-auto px-5 py-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {menu.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => scrollTo(cat.id)}
+              className={`shrink-0 whitespace-nowrap rounded-full px-4 py-1.5 font-heading text-xs uppercase tracking-wider transition-all ${
+                activeSection === cat.id
+                  ? 'bg-brass-400 text-ink-900'
+                  : 'border border-ink-600 text-cream/70'
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="container-wide py-8 lg:py-12">
+        <div className="flex flex-col lg:flex-row lg:gap-10">
+          {/* Section shortcuts sidebar (desktop) */}
           <aside className="hidden w-56 shrink-0 lg:block">
             <div className="sticky top-24 space-y-1">
               <p className="mb-3 font-heading text-xs uppercase tracking-widest2 text-brass-400">
@@ -88,56 +107,32 @@ export default function FullMenu({ onBack }: { onBack: () => void }) {
             </div>
           </aside>
 
-          {/* Mobile section pills */}
-          <div className="mb-8 lg:hidden">
-            <p className="mb-3 font-heading text-xs uppercase tracking-widest2 text-brass-400">
-              Jump to
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {menu.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => scrollTo(cat.id)}
-                  className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 font-heading text-xs uppercase tracking-wider transition-all ${
-                    activeSection === cat.id
-                      ? 'bg-brass-400 text-ink-900'
-                      : 'border border-ink-600 text-cream/70 hover:border-brass-400/50'
-                  }`}
-                >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* Menu content */}
-          <div className="flex-1">
-            {/* Mobile pills spacer */}
-            <div className="h-2 lg:hidden" />
+          <div className="flex-1 min-w-0">
             {menu.map((cat, idx) => (
               <section
                 key={cat.id}
                 id={cat.id}
-                className={`scroll-mt-24 ${idx > 0 ? 'mt-16 pt-8 border-t border-ink-600/40' : ''}`}
+                className={`scroll-mt-[120px] lg:scroll-mt-24 ${idx > 0 ? 'mt-12 pt-8 border-t border-ink-600/40 lg:mt-16' : ''}`}
               >
-                <div className="mb-6">
-                  <h2 className="font-display text-3xl uppercase leading-none text-cream sm:text-4xl">
+                <div className="mb-5 lg:mb-6">
+                  <h2 className="font-display text-2xl uppercase leading-none text-cream sm:text-3xl lg:text-4xl">
                     {cat.label}
                   </h2>
-                  <p className="mt-2 font-heading text-sm uppercase tracking-widest text-brass-400/80">
+                  <p className="mt-2 font-heading text-xs uppercase tracking-widest text-brass-400/80 lg:text-sm">
                     {cat.blurb}
                   </p>
                 </div>
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-3 lg:grid-cols-2 lg:gap-4">
                   {cat.items.map((item) => (
                     <div
                       key={item.name}
-                      className="card-surface group p-6 transition-all duration-300 hover:border-brass-400/50 hover:bg-ink-700/40"
+                      className="card-surface group p-5 lg:p-6 transition-all duration-300 hover:border-brass-400/50 hover:bg-ink-700/40"
                     >
-                      <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-start justify-between gap-3 lg:gap-4">
                         <div className="flex-1">
                           <div className="flex flex-wrap items-center gap-2">
-                            <h3 className="font-heading text-lg uppercase tracking-wide text-cream transition-colors group-hover:text-brass-300">
+                            <h3 className="font-heading text-base uppercase tracking-wide text-cream transition-colors group-hover:text-brass-300 lg:text-lg">
                               {item.name}
                             </h3>
                             {item.tag && (
@@ -152,7 +147,7 @@ export default function FullMenu({ onBack }: { onBack: () => void }) {
                             {item.description}
                           </p>
                         </div>
-                        <span className="font-display text-2xl text-brass-400">{item.price}</span>
+                        <span className="font-display text-xl text-brass-400 lg:text-2xl">{item.price}</span>
                       </div>
                     </div>
                   ))}
@@ -160,7 +155,7 @@ export default function FullMenu({ onBack }: { onBack: () => void }) {
               </section>
             ))}
 
-            <div className="mt-16 flex items-center justify-center gap-3 text-center">
+            <div className="mt-12 flex items-center justify-center gap-3 text-center lg:mt-16">
               <Flame size={16} className="text-ember-400" />
               <p className="font-body text-sm text-cream/50">
                 Prices vary nightly. Ask your bartender about happy hour food and daily specials.
