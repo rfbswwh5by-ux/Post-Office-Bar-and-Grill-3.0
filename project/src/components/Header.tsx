@@ -38,18 +38,31 @@ export default function Header() {
     >
       <div className="container-wide flex items-center justify-between">
         <a href="#top" className="group flex items-center gap-3">
-          <img
-            src="/post_office_icon_logo.png"
-            alt="The PO Bar & Grill logo"
-            className="h-10 w-10 object-contain invert brightness-[0.92] sepia-[0.25] saturate-[200%] hue-rotate-[10deg] transition-transform duration-300 group-hover:scale-110"
-            style={{ filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.88)' }}
-          />
-          <img
-            src="/post_office_new_logo.png"
-            alt="The Post Office Bar & Grill"
-            className="hidden h-8 w-auto object-contain sm:block"
-            style={{ filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.88)' }}
-          />
+          
+          {/* Desktop Stamp */}
+<img
+  src="/post_office_icon_logo.png"
+  alt="The PO Bar & Grill logo"
+  className="hidden md:block h-10 w-10 object-contain"
+  style={{ filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.88)' }}
+/>
+
+{/* Mobile Stamp */}
+<img
+  src="/post_office_icon_logo.png"
+  alt="The PO Bar & Grill logo"
+  className="block md:hidden h-10 w-10 object-contain"
+  style={{ filter: 'invert(1) brightness(0.92)' }}
+/>
+
+{/* Desktop Logo */}
+<img
+  src="/post_office_new_logo.png"
+  alt="The Post Office Bar & Grill"
+  className="hidden sm:block h-8 w-auto object-contain"
+  style={{ filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.88)' }}
+/>
+          
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
