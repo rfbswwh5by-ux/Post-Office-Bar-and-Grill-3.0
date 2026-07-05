@@ -35,10 +35,17 @@ const buttonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   }, []);
   
 useEffect(() => {
-  buttonRefs.current[activeSection]?.scrollIntoView({
+  const activeButton = buttonRefs.current[activeSection];
+  const container = activeButton?.parentElement;
+
+  if (!activeButton || !container) return;
+
+  const buttonCenter = activeButton.offsetLeft + activeButton.offsetWidth / 2;
+  const containerCenter = container.clientWidth / 2;
+
+  container.scrollTo({
+    left: buttonCenter - containerCenter,
     behavior: 'smooth',
-    inline: 'center',
-    block: 'nearest',
   });
 }, [activeSection]);
   
