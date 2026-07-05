@@ -14,6 +14,14 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+  document.body.style.overflow = open ? "hidden" : "";
+
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [open]);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -74,6 +82,15 @@ export default function Header() {
     open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
   }`}
 >
+
+  <button
+  onClick={() => setOpen(false)}
+  className="absolute top-6 right-6 flex h-12 w-12 items-center justify-center rounded-lg border border-ink-600 bg-ink-900/70 text-cream transition-colors hover:border-brass-400 hover:text-brass-400"
+  aria-label="Close menu"
+>
+  <X size={24} />
+</button>
+  
   <nav className="container-wide flex min-h-screen flex-col pt-28">
     <div className="flex flex-col gap-6">
       {links.map((l) => (
