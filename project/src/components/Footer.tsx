@@ -9,18 +9,39 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4">
-              <img
-                src="/post_office_icon_logo.png"
-                alt="The Post Office Bar & Grill"
-                className="h-16 w-16 object-contain"
-                style={{ filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.88)' }}
-              />
-              <img
-                src="/post_office_new_logo.png"
-                alt="The Post Office Bar & Grill"
-                className="h-12 w-auto max-w-[260px] object-contain"
-                style={{ filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.88)' }}
-              />
+              
+              {/* Desktop Stamp */}
+<img
+  src="/post_office_icon_logo.png"
+  alt="The Post Office Bar & Grill"
+  className="hidden md:block h-16 w-16 object-contain"
+  style={{ filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.88)' }}
+/>
+
+{/* Mobile Stamp */}
+<img
+  src="/post_office_icon_logo.png"
+  alt="The Post Office Bar & Grill"
+  className="block md:hidden h-16 w-16 object-contain"
+  style={{ filter: 'invert(1) brightness(0.92)' }}
+/>
+              
+              {/* Desktop Logo */}
+<img
+  src="/post_office_new_logo.png"
+  alt="The Post Office Bar & Grill"
+  className="hidden md:block h-12 w-auto max-w-[260px] object-contain"
+  style={{ filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.88)' }}
+/>
+
+{/* Mobile Logo */}
+<img
+  src="/post_office_new_logo.png"
+  alt="The Post Office Bar & Grill"
+  className="block md:hidden h-12 w-auto max-w-[260px] object-contain"
+  style={{ filter: 'invert(1) brightness(0.92)' }}
+/>
+              
             </div>
             <p className="mt-5 max-w-md font-body text-sm leading-relaxed text-cream/60">
               A historic bar and grill in the building that served as
