@@ -536,7 +536,7 @@ export const menu: MenuCategory[] = [
     },
     {
       name: 'Rotating Seasonal',
-      description: 'Ask your server about today's seasonal selection.',
+      description: "Ask your server about today's seasonal selection.",
       price: '',
     },
     {
