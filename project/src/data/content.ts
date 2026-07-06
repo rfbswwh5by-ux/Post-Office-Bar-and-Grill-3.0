@@ -401,7 +401,7 @@ export const menu: MenuCategory[] = [
       name: 'Hot Fudge Ice Cream Cake',
       description: 'A rich ice cream cake topped with hot fudge.',
       price: '$7.25',
-      tag: 'Sweet Treat',
+      tag: 'Must Try',
     },
   ],
 },
