@@ -14,388 +14,681 @@ export type MenuCategory = {
 
 export const menu: MenuCategory[] = [
   {
-    id: 'starters',
-    label: 'Starters & Shareables',
-    blurb: 'Built for the table, made to disappear.',
-    items: [
-      {
-        name: 'Garlic Parmesan Wings',
-        description: 'Crispy wings tossed in roasted garlic butter and shaved parmesan. The house signature — a must try.',
-        price: '$11',
-        tag: 'Must Try',
-      },
-      {
-        name: 'Chicken Wings',
-        description: 'Hand-breaded and fried golden. Choice of buffalo, BBQ, garlic parmesan, or naked. 8 count.',
-        price: '$10',
-      },
-      {
-        name: 'Butterfly Shrimp',
-        description: 'Lightly breaded butterfly shrimp, fried crisp and served with cocktail sauce and lemon.',
-        price: '$12',
-        tag: 'Local Favorite',
-      },
-      {
-        name: 'Pork Tenderloin Sandwich',
-        description: 'A Midwestern classic — breaded pork tenderloin, pickles, mustard, on a toasted bun.',
-        price: '$10',
-      },
-      {
-        name: 'Mozzarella Sticks',
-        description: 'Golden-fried mozzarella with warm marinara for dipping.',
-        price: '$8',
-      },
-      {
-        name: 'Onion Rings',
-        description: 'Thick-cut, beer-battered onion rings fried crisp.',
-        price: '$7',
-      },
-      {
-        name: 'Loaded Fries',
-        description: 'Crispy fries piled with melted cheese, bacon, and scallions.',
-        price: '$9',
-      },
-      {
-        name: 'Fried Pickles',
-        description: 'Dill spears battered and fried, served with ranch.',
-        price: '$7',
-      },
-    ],
-  },
+  id: 'appetizers',
+  label: 'Appetizers',
+  blurb: 'Start the table off right.',
+  items: [
+    {
+      name: 'Pretzels (4)',
+      description: 'Bavarian style.',
+      price: '$12.25',
+    },
+    {
+      name: 'Mini Tacos (10)',
+      description: 'Chicken mini tacos.',
+      price: '$9.25',
+    },
+    {
+      name: 'Chicken Strips (4)',
+      description: 'Crispy chicken strips.',
+      price: '$12.75',
+    },
+    {
+      name: 'Ravioli (10)',
+      description: 'Fried ravioli.',
+      price: '$8.25',
+    },
+    {
+      name: 'Poppers (6)',
+      description: 'Cream cheese poppers.',
+      price: '$8.25',
+    },
+    {
+      name: 'Waffle Fries',
+      description: 'Crispy waffle-cut fries.',
+      price: '$4.25',
+    },
+    {
+      name: 'Loaded Waffle Fries',
+      description: 'Waffle fries loaded up.',
+      price: '$7.50',
+    },
+    {
+      name: 'Popcorn Shrimp',
+      description: 'Bite-sized fried shrimp.',
+      price: '$8.75',
+    },
+    {
+      name: 'Hot Wings (12)',
+      description: 'Classic hot wings.',
+      price: '$16.75',
+    },
+    {
+      name: 'Garlic Parmesan Wings (12)',
+      description: 'Garlic parmesan wings.',
+      price: '$17.75',
+      tag: 'Must Try',
+    },
+    {
+      name: 'Mushrooms (10)',
+      description: 'Fried mushrooms.',
+      price: '$6.25',
+    },
+    {
+      name: 'Onion Rings',
+      description: 'Crispy onion rings.',
+      price: '$6.75',
+    },
+    {
+      name: 'Tater Tots',
+      description: 'Golden tater tots.',
+      price: '$3.75',
+    },
+    {
+      name: 'French Fries',
+      description: 'Crispy fries.',
+      price: '$3.75',
+    },
+    {
+      name: 'Cheese Fries',
+      description: 'Fries topped with cheese.',
+      price: '$4.75',
+    },
+    {
+      name: 'Pickle Fries',
+      description: 'Fried pickle fries.',
+      price: '$7.75',
+    },
+    {
+      name: 'Jalapeño Mac & Cheese Bites',
+      description: 'Jalapeño mac and cheese bites.',
+      price: '$7.25',
+    },
+    {
+      name: 'Loaded Nachos',
+      description: 'Loaded nachos.',
+      price: '$10.75',
+    },
+    {
+      name: 'Cheesesticks (6)',
+      description: 'Fried cheesesticks.',
+      price: '$8.25',
+    },
+  ],
+},
   {
-    id: 'burgers',
-    label: 'Burgers & Sandwiches',
-    blurb: 'Hand-formed, grilled to order, stacked tall.',
-    items: [
-      {
-        name: 'The Post Office Cheeseburger',
-        description: 'Half-pound Angus patty, American cheese, lettuce, tomato, onion, house sauce on a toasted bun.',
-        price: '$11',
-        tag: 'Signature',
-      },
-      {
-        name: 'Bacon Cheeseburger',
-        description: 'Half-pound Angus patty, crisp bacon, cheddar, caramelized onion.',
-        price: '$13',
-      },
-      {
-        name: 'Double Cheeseburger',
-        description: 'Two patties, double cheese, pickles, house sauce. Bring your appetite.',
-        price: '$14',
-      },
-      {
-        name: 'French Dip',
-        description: 'Thin-sliced roast beef on a toasted roll with melted provolone and a side of au jus.',
-        price: '$13',
-      },
-      {
-        name: 'Brisket Sandwich',
-        description: 'Slow-smoked brisket, tangy house sauce, pickled onion, on a brioche bun.',
-        price: '$13',
-      },
-      {
-        name: 'Gyro',
-        description: 'Spit-roasted lamb and beef, tzatziki, tomato, onion, in warm pita.',
-        price: '$12',
-      },
-      {
-        name: 'Pork Tenderloin Sandwich',
-        description: 'Hand-breaded Iowa-style tenderloin, pickles, mustard, toasted bun.',
-        price: '$10',
-      },
-      {
-        name: 'Chicken Sandwich',
-        description: 'Crispy or grilled chicken breast, lettuce, tomato, mayo on a brioche bun.',
-        price: '$11',
-      },
-    ],
-  },
+  id: 'sandwiches',
+  label: 'Sandwiches',
+  blurb: 'Served with fries.',
+  items: [
+    {
+      name: 'Hamburger',
+      description: 'Classic hamburger served with fries.',
+      price: '$12.75',
+    },
+    {
+      name: 'Cheeseburger',
+      description: 'Classic cheeseburger served with fries.',
+      price: '$13.25',
+    },
+    {
+      name: 'Patty Melt',
+      description: 'Grilled onions and Swiss cheese on rye bread.',
+      price: '$13.75',
+    },
+    {
+      name: 'Double Cheeseburger',
+      description: 'Two 6 oz. beef patties with cheese.',
+      price: '$17.25',
+    },
+    {
+      name: 'Bacon Cheeseburger',
+      description: 'Cheeseburger topped with crispy bacon.',
+      price: '$14.75',
+    },
+    {
+      name: 'Double Bacon Cheeseburger',
+      description: 'Two 6 oz. beef patties with bacon and cheese.',
+      price: '$18.75',
+    },
+    {
+      name: 'Frisco Melt',
+      description: 'Texas toast with Swiss, 1000 Island, lettuce, and tomato.',
+      price: '$13.75',
+    },
+    {
+      name: 'Breaded Chicken',
+      description: 'Breaded chicken sandwich served with fries.',
+      price: '$12.50',
+    },
+    {
+      name: 'BLT',
+      description: 'Bacon, lettuce, and tomato on toasted bread.',
+      price: '$11.25',
+    },
+    {
+      name: 'Grilled Cheese',
+      description: 'Classic grilled cheese sandwich.',
+      price: '$5.75',
+    },
+    {
+      name: 'Pork Tenderloin',
+      description: 'Breaded pork tenderloin served with fries.',
+      price: '$12.75',
+    },
+    {
+      name: 'Charbroiled Chicken',
+      description: 'Charbroiled chicken breast served with fries.',
+      price: '$12.75',
+    },
+    {
+      name: 'Gyro',
+      description: 'Lamb and beef mix served on pita.',
+      price: '$13.25',
+    },
+    {
+      name: 'Brisket',
+      description: 'Slow-cooked brisket with honey BBQ sauce.',
+      price: '$13.75',
+    },
+    {
+      name: 'Fish Fillet',
+      description: 'Cod fillet served with fries.',
+      price: '$12.25',
+    },
+    {
+      name: 'Catfish Sandwich',
+      description: 'Fried catfish sandwich served with fries.',
+      price: '$12.75',
+    },
+    {
+      name: 'Philly Cheesesteak',
+      description: 'Thin-sliced steak with melted cheese.',
+      price: '$13.25',
+    },
+    {
+      name: 'French Dip',
+      description: 'Roast beef sandwich served with au jus.',
+      price: '$12.75',
+    },
+    {
+      name: 'Reuben',
+      description: 'Corned beef, Swiss, sauerkraut, and Thousand Island.',
+      price: '$14.50',
+    },
+    {
+      name: 'Mushroom Swiss Burger',
+      description: 'Burger topped with mushrooms and Swiss cheese.',
+      price: '$14.25',
+    },
+    {
+      name: 'Grilled Ham & Cheese',
+      description: 'Grilled ham and melted cheese.',
+      price: '$7.75',
+    },
+    {
+      name: 'Shrimp Po Boy',
+      description: 'Fried shrimp with remoulade sauce.',
+      price: '$14.25',
+    },
+  ],
+},
   {
-    id: 'wraps',
-    label: 'Wraps',
-    blurb: 'Rolled tight, packed full.',
-    items: [
-      {
-        name: 'Chicken Bacon Ranch Wrap',
-        description: 'Crispy chicken, bacon, cheddar, lettuce, tomato, ranch in a spinach tortilla.',
-        price: '$11',
-      },
-      {
-        name: 'Buffalo Chicken Wrap',
-        description: 'Crispy chicken tossed in buffalo sauce, blue cheese crumble, lettuce, tomato.',
-        price: '$11',
-      },
-      {
-        name: 'Philly Cheesesteak Wrap',
-        description: 'Shaved steak, peppers, onion, melted provolone, garlic aioli.',
-        price: '$12',
-      },
-      {
-        name: 'Veggie Wrap',
-        description: 'Grilled peppers, onion, mushroom, lettuce, tomato, cheese, balsamic glaze.',
-        price: '$10',
-      },
-    ],
-  },
+  id: 'dinners',
+  label: 'Dinners',
+  blurb: 'Served with baked potato, mashed potatoes or fries, and Texas toast. Only steak dinners include a salad. Add a small salad for $3.75.',
+  items: [
+    {
+      name: 'Chicken Parmesan',
+      description: 'Served with marinara sauce, Swiss cheese, and Texas toast.',
+      price: '$14.75',
+    },
+    {
+      name: 'Chicken Fried Steak',
+      description: 'Does not include a salad.',
+      price: '$13.75',
+    },
+    {
+      name: 'Catfish',
+      description: 'Two 5–7 oz. fillets.',
+      price: '$15.75',
+    },
+    {
+      name: 'Shrimp',
+      description: 'Six jumbo fried shrimp.',
+      price: '$14.00',
+    },
+    {
+      name: '12 oz. Jalapeño Marinated Pork Chop',
+      description: 'Served with your choice of side.',
+      price: '$16.75',
+    },
+    {
+      name: 'Chicken Strip Dinner',
+      description: 'Served with your choice of side.',
+      price: '$15.75',
+    },
+    {
+      name: '6 oz. Top Sirloin',
+      description: 'Served with your choice of side.',
+      price: '$17.75',
+    },
+    {
+      name: '10 oz. Top Sirloin',
+      description: 'Served with your choice of side.',
+      price: '$19.75',
+    },
+    {
+      name: '8 oz. KC Strip',
+      description: 'Served with your choice of side.',
+      price: '$19.25',
+    },
+    {
+      name: '10 oz. Ribeye (Select)',
+      description: 'Served with your choice of side.',
+      price: '$26.75',
+      tag: 'Signature',
+    },
+    {
+      name: 'Steak & Shrimp',
+      description: 'Four shrimp with a 6 oz. sirloin.',
+      price: '$19.75',
+      tag: 'Local Favorite',
+    },
+    {
+      name: 'Charbroiled Chicken',
+      description: 'Grilled chicken breast served with your choice of side.',
+      price: '$14.25',
+    },
+  ],
+},
   {
-    id: 'mains',
-    label: 'From the Grill',
-    blurb: 'The reason regulars keep coming back.',
-    items: [
-      {
-        name: '12 oz Ribeye Steak',
-        description: 'Hand-cut ribeye, grilled to order, finished with herb butter. The plate that built our reputation.',
-        price: '$24',
-        tag: 'Signature',
-      },
-      {
-        name: 'Sirloin Steak',
-        description: '8 oz sirloin, grilled to order, served with a side and your choice of potato.',
-        price: '$18',
-      },
-      {
-        name: 'Butterfly Shrimp Dinner',
-        description: 'A generous portion of breaded butterfly shrimp with cocktail sauce and two sides.',
-        price: '$16',
-        tag: 'Local Favorite',
-      },
-      {
-        name: 'Chicken Tenders & Fries',
-        description: 'Hand-breaded tenders, golden fried, with your choice of dipping sauce.',
-        price: '$11',
-      },
-      {
-        name: 'Fish & Chips',
-        description: 'Beer-battered cod, fried crisp, with tartar sauce and a pile of fries.',
-        price: '$14',
-      },
-      {
-        name: 'Mac & Cheese',
-        description: 'Creamy mac and cheese, baked with a buttery crumb topping. A kid favorite.',
-        price: '$7',
-      },
-    ],
-  },
+  id: 'wraps',
+  label: 'Wraps',
+  blurb: 'Served with fries.',
+  items: [
+    {
+      name: 'Taco Wrap',
+      description: 'Seasoned taco meat wrapped in a flour tortilla.',
+      price: '$12.25',
+    },
+    {
+      name: 'Buffalo Chicken Wrap',
+      description: 'Crispy chicken tossed in buffalo sauce.',
+      price: '$14.25',
+      tag: 'Local Favorite',
+    },
+    {
+      name: 'Philly Cheesesteak Wrap',
+      description: 'Thin-sliced steak with melted cheese wrapped in a flour tortilla.',
+      price: '$13.25',
+    },
+    {
+      name: 'Chicken Bacon Ranch Wrap',
+      description: 'Grilled chicken, bacon, and ranch wrapped in a flour tortilla.',
+      price: '$15.25',
+      tag: 'Must Try',
+    },
+  ],
+},
   {
-    id: 'salads',
-    label: 'Salads',
-    blurb: 'Fresh, crisp, and a little lighter.',
-    items: [
-      {
-        name: 'House Salad',
-        description: 'Mixed greens, tomato, cucumber, onion, croutons, your choice of dressing.',
-        price: '$8',
-      },
-      {
-        name: 'Grilled Chicken Salad',
-        description: 'House greens topped with grilled chicken breast, tomato, egg, and dressing.',
-        price: '$11',
-      },
-      {
-        name: 'Crispy Chicken Salad',
-        description: 'House greens topped with hand-breaded chicken tenders, tomato, and ranch.',
-        price: '$11',
-      },
-      {
-        name: 'Steak Salad',
-        description: 'Mixed greens, sliced sirloin, tomato, onion, bleu cheese crumble, balsamic.',
-        price: '$14',
-      },
-    ],
-  },
+  id: 'salads',
+  label: 'Salads',
+  blurb: 'Fresh, made to order, and served with your choice of dressing.',
+  items: [
+    {
+      name: 'Fried Chicken Salad',
+      description: 'Fresh greens topped with crispy fried chicken.',
+      price: '$13.25',
+      tag: 'Local Favorite',
+    },
+    {
+      name: 'Grilled Chicken Salad',
+      description: 'Fresh greens topped with grilled chicken.',
+      price: '$12.25',
+    },
+    {
+      name: 'Small House Salad',
+      description: 'Fresh mixed greens with your choice of dressing.',
+      price: '$4.25',
+    },
+    {
+      name: 'Chef Salad',
+      description: 'Fresh greens loaded with classic chef salad toppings.',
+      price: '$10.50',
+    },
+    {
+      name: 'Grilled Shrimp Salad',
+      description: 'Fresh greens topped with grilled shrimp.',
+      price: '$12.75',
+      tag: 'Must Try',
+    },
+  ],
+},
   {
-    id: 'kids',
-    label: 'Kids Menu',
-    blurb: 'For the little regulars. 10 and under.',
-    items: [
-      {
-        name: 'Kids Cheeseburger',
-        description: 'Small patty, American cheese, bun. Served with fries.',
-        price: '$7',
-      },
-      {
-        name: 'Kids Chicken Tenders',
-        description: 'Two hand-breaded tenders with fries and a dipping sauce.',
-        price: '$7',
-      },
-      {
-        name: 'Kids Mac & Cheese',
-        description: 'Creamy mac and cheese, baked with a buttery crumb topping.',
-        price: '$6',
-      },
-      {
-        name: 'Kids Grilled Cheese',
-        description: 'Buttery toasted sandwich with melted American cheese. Served with fries.',
-        price: '$6',
-      },
-      {
-        name: 'Kids Corn Dog',
-        description: 'A classic corn dog, served with fries.',
-        price: '$6',
-      },
-    ],
-  },
+  id: 'childrens-menu',
+  label: "Children's Menu",
+  blurb: 'For guests 12 and under. Includes French fries and a kid-sized soft drink.',
+  items: [
+    {
+      name: 'Chicken Nuggets',
+      description: 'Crispy chicken nuggets served with French fries and a kid-sized soft drink.',
+      price: '$6.75',
+    },
+    {
+      name: 'Chicken Strips',
+      description: 'Two crispy chicken strips served with French fries and a kid-sized soft drink.',
+      price: '$6.75',
+    },
+    {
+      name: 'Hamburger',
+      description: 'Kid-sized hamburger served with French fries and a kid-sized soft drink.',
+      price: '$6.75',
+    },
+    {
+      name: 'Cheeseburger',
+      description: 'Kid-sized cheeseburger served with French fries and a kid-sized soft drink.',
+      price: '$6.75',
+    },
+  ],
+},
   {
-    id: 'sides',
-    label: 'Sides & Extras',
-    blurb: 'Round out the plate.',
-    items: [
-      { name: 'French Fries', description: 'Crispy, golden, salted just right.', price: '$4' },
-      { name: 'Onion Rings', description: 'Thick-cut, beer-battered, fried crisp.', price: '$4' },
-      { name: 'Loaded Fries', description: 'Cheese, bacon, scallions.', price: '$7' },
-      { name: 'Mozzarella Sticks', description: 'Fried mozzarella with marinara.', price: '$7' },
-      { name: 'Coleslaw', description: 'Cool, creamy, house-made.', price: '$3' },
-      { name: 'Side Salad', description: 'Mixed greens with your choice of dressing.', price: '$4' },
-      { name: 'Cup of Chili', description: 'Hearty house chili, served with crackers.', price: '$5' },
-      { name: 'Extra Dressing', description: 'Ranch, bleu cheese, vinaigrette, or house.', price: '50¢' },
-      { name: 'Extra Sauce', description: 'Ranch, buffalo, BBQ, garlic parmesan, or house sauce.', price: '50¢' },
-      { name: 'Add Bacon', description: 'Two strips of crisp applewood bacon on anything.', price: '$2' },
-      { name: 'Add Cheese', description: 'American, cheddar, provolone, or pepper jack.', price: '$1' },
-    ],
-  },
+  id: 'dessert',
+  label: 'Dessert',
+  blurb: 'Finish your meal with something sweet.',
+  items: [
+    {
+      name: 'Hot Fudge Ice Cream Cake',
+      description: 'A rich ice cream cake topped with hot fudge.',
+      price: '$7.25',
+      tag: 'Sweet Treat',
+    },
+  ],
+},
   {
-    id: 'dessert',
-    label: 'Dessert',
-    blurb: 'Save room.',
-    items: [
-      {
-        name: 'Chocolate Lava Cake',
-        description: 'Warm chocolate cake with a molten center, served with a scoop of vanilla ice cream.',
-        price: '$7',
-      },
-      {
-        name: 'New York Cheesecake',
-        description: 'Classic creamy cheesecake with a graham crust and berry drizzle.',
-        price: '$7',
-      },
-      {
-        name: 'Fried Oreos',
-        description: 'Oreos battered and fried, dusted with powdered sugar. A local favorite.',
-        price: '$6',
-        tag: 'Local Favorite',
-      },
-      {
-        name: 'Ice Cream',
-        description: 'A scoop of vanilla, chocolate, or twist. Kid-approved.',
-        price: '$4',
-      },
-    ],
-  },
+  id: 'soft-drinks',
+  label: 'Soft Drinks',
+  blurb: 'Refreshing Coca-Cola products.',
+  items: [
+    {
+      name: 'Coca-Cola Products',
+      description: 'Ask your server for today's available Coca-Cola selections.',
+      price: '$3.50',
+    },
+  ],
+},
   {
-    id: 'beer',
-    label: 'Beer',
-    blurb: 'Cold, on tap and in the bottle.',
-    items: [
-      {
-        name: 'Draft Beer',
-        description: 'A rotating selection of domestic and craft drafts on tap. Ask your bartender what is pouring tonight.',
-        price: 'from $4',
-      },
-      {
-        name: 'Domestic Bottles & Cans',
-        description: 'Bud Light, Coors Light, Miller Lite, Busch Light, and more — ice cold.',
-        price: 'from $3',
-      },
-      {
-        name: 'Craft Bottles',
-        description: 'A rotating list of regional Missouri and Midwest craft bottles.',
-        price: 'from $6',
-      },
-      {
-        name: 'Import Bottles',
-        description: 'Corona, Modelo, Dos Equis, Heineken, and seasonal imports.',
-        price: 'from $5',
-      },
-      {
-        name: 'Pitchers',
-        description: 'Share a pitcher with the table. Domestic and select draft available.',
-        price: 'from $12',
-      },
-    ],
-  },
+  id: 'beer-bottles',
+  label: 'Beer (Bottles)',
+  blurb: 'Enjoy an ice-cold bottled beer from our selection.',
+  items: [
+    {
+      name: 'Bud Light',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Budweiser',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Busch Light',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Busch',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Bud Select',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Michelob Ultra',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Miller Lite',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Modelo',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Boulevard Wheat',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Guinness',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Twisted Tea',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Stag',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Yuengling',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Yuengling Flight',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Coors Light',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Corona',
+      description: 'Bottle.',
+      price: '',
+    },
+    {
+      name: 'Angry Orchard',
+      description: 'Hard cider (bottle).',
+      price: '',
+    },
+  ],
+},
   {
-    id: 'cocktails',
-    label: 'Cocktails & Spirits',
-    blurb: 'Friendly bartenders, stiff pours.',
-    items: [
-      {
-        name: 'Signature Cocktails',
-        description: 'A rotating list of house cocktails poured by bartenders who know your name.',
-        price: 'from $7',
-        tag: 'Signature',
-      },
-      {
-        name: 'Well Drinks',
-        description: 'Your go-to mixed drinks, made right. Vodka, rum, gin, whiskey, tequila.',
-        price: 'from $5',
-      },
-      {
-        name: 'Premium Mixed Drinks',
-        description: 'Top-shelf spirits, fresh mixers, made to order.',
-        price: 'from $8',
-      },
-      {
-        name: 'Margaritas',
-        description: 'On the rocks or frozen, with salt or without. Classic, strawberry, or mango.',
-        price: 'from $7',
-      },
-      {
-        name: 'Martinis',
-        description: 'Gin or vodka, dirty or dry, olives or twist. Shaken, not stirred.',
-        price: 'from $8',
-      },
-      {
-        name: 'Bombs',
-        description: 'Jägerbombs, Vegas bombs, and whatever the night calls for.',
-        price: 'from $7',
-      },
-    ],
-  },
+  id: 'draft',
+  label: 'Draft Beer',
+  blurb: 'Ice-cold draft beer on tap.',
+  items: [
+    {
+      name: 'Bud Light',
+      description: 'Draft beer.',
+      price: '',
+    },
+    {
+      name: 'Budweiser',
+      description: 'Draft beer.',
+      price: '',
+    },
+    {
+      name: 'Yuengling',
+      description: 'Draft beer.',
+      price: '',
+    },
+    {
+      name: 'Yuengling Flight',
+      description: 'Draft beer.',
+      price: '',
+    },
+    {
+      name: 'Rotating Seasonal',
+      description: 'Ask your server about today's seasonal selection.',
+      price: '',
+    },
+    {
+      name: 'Snapper (Logboat)',
+      description: 'Draft beer.',
+      price: '',
+    },
+    {
+      name: 'Blue Moon',
+      description: 'Belgian-style wheat ale.',
+      price: '',
+    },
+    {
+      name: 'Michelob Amber Bock',
+      description: 'Amber lager.',
+      price: '',
+    },
+  ],
+},
   {
-    id: 'wine',
-    label: 'Wine & Seltzers',
-    blurb: 'A little something for everyone.',
-    items: [
-      {
-        name: 'House Red',
-        description: 'A smooth pour-by-the-glass red — ask for the current selection.',
-        price: '$6',
-      },
-      {
-        name: 'House White',
-        description: 'A crisp pour-by-the-glass white — ask for the current selection.',
-        price: '$6',
-      },
-      {
-        name: 'Wine by the Glass',
-        description: 'A small rotating list of reds and whites by the glass.',
-        price: 'from $6',
-      },
-      {
-        name: 'Hard Seltzers',
-        description: 'White Claw, Truly, and rotating seasonal seltzers — light and refreshing.',
-        price: 'from $5',
-      },
-      {
-        name: 'Red Bull',
-        description: 'Wings for the night. Plain or flavored, on its own or as a mixer.',
-        price: '$5',
-      },
-    ],
-  },
+  id: 'seltzers',
+  label: 'Seltzers',
+  blurb: 'Refreshing hard seltzers and fruit-forward favorites.',
+  items: [
+    {
+      name: 'White Claw (Black Cherry)',
+      description: 'Black cherry hard seltzer.',
+      price: '',
+    },
+    {
+      name: 'Carbliss (Cranberry)',
+      description: 'Cranberry flavored ready-to-drink cocktail.',
+      price: '',
+    },
+    {
+      name: 'Carbliss (Pineapple)',
+      description: 'Pineapple flavored ready-to-drink cocktail.',
+      price: '',
+    },
+    {
+      name: 'Carbliss (Black Raspberry)',
+      description: 'Black raspberry flavored ready-to-drink cocktail.',
+      price: '',
+    },
+    {
+      name: 'Carbliss (Peach)',
+      description: 'Peach flavored ready-to-drink cocktail.',
+      price: '',
+    },
+    {
+      name: 'Carbliss (Lemon Lime)',
+      description: 'Lemon lime flavored ready-to-drink cocktail.',
+      price: '',
+    },
+  ],
+},
   {
-    id: 'soft',
-    label: 'Soft Drinks',
-    blurb: 'For the designated drivers.',
-    items: [
-      { name: 'Fountain Soda', description: 'Coke, Diet Coke, Sprite, Dr Pepper, and more. Free refills.', price: '$3' },
-      { name: 'Sweet Tea', description: 'House-brewed Southern sweet tea.', price: '$3' },
-      { name: 'Unsweet Tea', description: 'House-brewed, served over ice with lemon.', price: '$3' },
-      { name: 'Lemonade', description: 'Fresh-squeezed, sweet and tart.', price: '$3' },
-      { name: 'Coffee', description: 'Hot and fresh, regular or decaf.', price: '$2' },
-      { name: 'Bottled Water', description: 'Cold, still, 20 oz.', price: '$2' },
-    ],
-  },
+  id: 'beer-cans',
+  label: 'Beer (Cans)',
+  blurb: 'Cold canned beer selection.',
+  items: [
+    {
+      name: 'Budweiser',
+      description: 'Classic American lager.',
+      price: '',
+    },
+    {
+      name: 'Bud Light',
+      description: 'Light American lager.',
+      price: '',
+    },
+    {
+      name: 'Natural Light',
+      description: 'Light American lager.',
+      price: '',
+    },
+    {
+      name: 'PBR',
+      description: 'Pabst Blue Ribbon American lager.',
+      price: '',
+    },
+    {
+      name: 'Lagunitas Little Sumpin',
+      description: 'Wheat IPA.',
+      price: '',
+    },
+  ],
+},
+  {
+  id: 'wine',
+  label: 'Wine',
+  blurb: 'A selection of popular wines served chilled or at room temperature.',
+  items: [
+    {
+      name: 'Cabernet',
+      description: 'Rich, full-bodied red wine.',
+      price: '',
+    },
+    {
+      name: 'White Zinfandel',
+      description: 'Light, refreshing blush wine.',
+      price: '',
+    },
+    {
+      name: 'Pinot Grigio',
+      description: 'Crisp and refreshing white wine.',
+      price: '',
+    },
+    {
+      name: 'Chardonnay',
+      description: 'Smooth, classic white wine.',
+      price: '',
+    },
+    {
+      name: 'Moscato',
+      description: 'Sweet, fruity white wine.',
+      price: '',
+    },
+  ],
+},
+  {
+  id: 'energy-drinks',
+  label: 'Energy Drinks',
+  blurb: 'Red Bull energy drinks served ice cold.',
+  items: [
+    {
+      name: 'Red Bull',
+      description: 'Original Red Bull Energy Drink.',
+      price: '',
+    },
+    {
+      name: 'Sugar Free',
+      description: 'Sugar Free Red Bull.',
+      price: '',
+    },
+    {
+      name: 'Tropical',
+      description: 'Red Bull Tropical Edition.',
+      price: '',
+    },
+    {
+      name: 'Blueberry',
+      description: 'Red Bull Blue Edition.',
+      price: '',
+    },
+    {
+      name: 'Watermelon',
+      description: 'Red Bull Watermelon Edition.',
+      price: '',
+    },
+  ],
+},
 ];
 
 export type Review = {
