@@ -46,6 +46,15 @@ export default function MenuSection({ onViewFull }: { onViewFull: () => void }) 
           ))}
         </div>
 
+        <div className="mt-8 flex justify-center">
+  <button
+    onClick={onViewFull}
+    className="btn-brass"
+  >
+    View Full Menu <ArrowRight size={18} />
+  </button>
+</div>
+
         <p className="mt-6 text-center font-heading text-sm uppercase tracking-widest text-brass-400/80">
           {current.blurb}
         </p>
