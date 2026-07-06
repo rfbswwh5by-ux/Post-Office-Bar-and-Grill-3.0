@@ -23,7 +23,7 @@ export default function Gallery() {
             Step <span className="text-brass-400">inside</span>
           </h2>
           <p className="mt-5 font-body text-cream/70">
-            A look at the room, the plates, and the people that make the Post
+            A look at the building, the plates, and the people that make the Post
             Office a Fulton fixture.
           </p>
         </div>
