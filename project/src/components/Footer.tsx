@@ -105,7 +105,7 @@ export default function Footer() {
             rights reserved.
           </p>
           <p className="font-heading text-[10px] uppercase tracking-widest2 text-cream/30">
-            Fulton&apos;s Historic Post Office · Est. 1917
+            Fulton&apos;s Historic Post Office · Est. 1996
           </p>
         </div>
       </div>
