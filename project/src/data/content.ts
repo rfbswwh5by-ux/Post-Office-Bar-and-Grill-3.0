@@ -746,7 +746,7 @@ export const galleryImages = [
   {
     src: '/images/IMG_0830.jpeg',
     alt: 'Chicken wings served on a plate',
-    caption: 'The Wings',
+    caption: 'Double Bacon Cheeseburger',
   },
   {
     src: '/images/IMG_0821.jpeg',
@@ -756,12 +756,12 @@ export const galleryImages = [
   {
     src: '/images/IMG_0835.jpeg',
     alt: 'Bacon cheeseburger with fries',
-    caption: 'Bacon Cheeseburger',
+    caption: 'Tenderloin & Fries',
   },
   {
     src: '/images/IMG_0828.jpeg',
     alt: 'Pork tenderloin sandwich with fries',
-    caption: 'Tenderloin & Fries',
+    caption: 'The Wings',
   },
 ];
 
