@@ -412,7 +412,7 @@ export const menu: MenuCategory[] = [
   items: [
     {
       name: 'Coca-Cola Products',
-      description: 'Ask your server for today's available Coca-Cola selections.',
+      description: "Ask your server for today's available Coca-Cola selections.",
       price: '$3.50',
     },
   ],
